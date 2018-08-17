@@ -26,4 +26,5 @@ describe('App', () => {
   //   expect(wrapper.find('CardContainer').prop('displayCompared')).toEqual(wrapper.instance().displayCompared)
   //   expect(wrapper.find('CardContainer').prop('comparedCard')).toEqual({})
   // })
+  it('should')
 })
