@@ -3,7 +3,6 @@ import './ComparedCard.css'
 import PropTypes from 'prop-types'
 
 const ComparedCard = ( { firstDistrict, compared, secondDistrict, firstDistrictName, secondDistrictName } ) => {
-  console.log('hey')
   return (
     <div className="comparedCard">
       <h2>{firstDistrictName}</h2>

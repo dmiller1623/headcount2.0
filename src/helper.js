@@ -16,23 +16,26 @@ export default class DistrictRepository {
    return cleaner
   }
 
-  findByName(name) {
-    if(!name) {
-      return 
-    }  
+  findByName(name = '') { 
     name = name.toUpperCase()
     return this.stats[name]
   }
   findAllMatches(name) {
     const schoolKeys = Object.keys(this.stats)
     if(!name) {
-      return schoolKeys
+      return schoolKeys.map(key => {
+        return this.stats[key]
+      })
     }
     name = name.toUpperCase()
     const matches = schoolKeys.filter(key => {
       return key.includes(name)
     })
-    return matches
+    let matchObject = matches.map(match => {
+      return this.stats[match]
+    })
+    // console.log(matchObject)
+    return matchObject
   }
 
   findAverage(match) {

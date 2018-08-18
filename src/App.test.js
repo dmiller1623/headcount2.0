@@ -11,20 +11,52 @@ describe('App', () => {
     const wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot()
   })
-  it('filtered districtss')
-  // it('Renders a Search component with the right props', () => {
-  //   const wrapper = shallow(<App />)
-  //   expect(wrapper.find('Search').prop('filterDistricts')).toEqual(wrapper.instance().filterDistricts)
-  // })
-  // it('renders a CardContainer with the right props', () => {
-  //   const districts = new DistrictRepository(kinderData)
-  //   const wrapper = shallow(<App />)
-  //   expect(wrapper.find('CardContainer').prop('districts')).toEqual(districts)
-  //   expect(wrapper.find('CardContainer').prop('filteredDistricts')).toEqual([])
-  //   expect(wrapper.find('CardContainer').prop('selectedCards')).toEqual([])
-  //   expect(wrapper.find('CardContainer').prop('displaySelected')).toEqual(wrapper.instance().displaySelected)
-  //   expect(wrapper.find('CardContainer').prop('displayCompared')).toEqual(wrapper.instance().displayCompared)
-  //   expect(wrapper.find('CardContainer').prop('comparedCard')).toEqual({})
-  // })
-  it('should')
+  it('it should start off with the data in districts as initial state', () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.state('filteredDistricts')).toHaveLength(181)
+    expect(wrapper.state('selectedCards')).toEqual([])
+    expect(wrapper.state('comparedCard')).toEqual({})
+    expect(wrapper.state('matchedCards')).toEqual(false)
+
+  })
+  it('filterDistricts when run should update the state of filteredDistricts', () => {
+    const wrapper = shallow(<App />)
+    const value = "Asp"
+    wrapper.instance().filterDistricts(value)
+    expect(wrapper.state('filteredDistricts')).toHaveLength(1)
+    
+  })
+  it('displaySelected should update the state of selected cards', () => {
+    const wrapper = shallow(<App />)
+    const location = "COLORADO"
+    wrapper.instance().displaySelected(location)
+    expect(wrapper.state('selectedCards')).toHaveLength(1)
+  })
+  it('remove selected should take the matching district out of the selected array', () => {
+    const wrapper = shallow(<App />)
+    const location = 'COLORADO SPRINGS 11'
+    const initialState =  [ 
+      { location: 'COLORADO',
+        stats: { '2004': 0.24, } },
+      { location: 'COLORADO SPRINGS 11',
+        stats:{ '2004': 0.069,  } } ]
+    wrapper.setState({ selectedCards: initialState })
+    expect(wrapper.state('selectedCards')).toHaveLength(2)
+    wrapper.instance().removeSelected(location)
+    expect(wrapper.state('selectedCards')).toHaveLength(1)
+  })
+  it('display compared should create an object with averages and update state to that object', () => {
+    const wrapper = shallow(<App />)
+    const initialState =  [ 
+      { location: 'COLORADO',
+        stats: { '2004': 0.24, } },
+      { location: 'COLORADO SPRINGS 11',
+        stats:{ '2004': 0.069,  } } ]
+    const expected = {"COLORADO": 0.53, "COLORADO SPRINGS 11": 0.833, "compared": 0.636}
+    wrapper.setState({ selectedCards: initialState })
+    wrapper.instance().displayCompared()
+    expect(wrapper.state('comparedCard')).toEqual(expected)
+  })
+  
+
 })

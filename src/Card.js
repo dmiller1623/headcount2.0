@@ -13,8 +13,13 @@ class Card extends Component {
   handleClick = () => {
     let currentState = this.state.clicked
     this.setState({ clicked: !currentState })
-    this.props.displaySelected(this.props.location)
-    this.props.displayCompared(this.props.location)
+    this.props.removeSelected(this.props.location)
+    if(this.props.selected) {
+      return 
+    } else {
+    this.props.displaySelected(this.props)
+    }
+    
   }
 
   render() {
