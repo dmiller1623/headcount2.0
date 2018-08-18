@@ -5,7 +5,6 @@ import ComparedCard from './ComparedCard.js';
 import PropTypes from 'prop-types'
 
 const CardContainer = ({ filteredDistricts, selectedCards, displaySelected, displayCompared, comparedCard, removeSelected }) => {
- 
   const displayFilter = filteredDistricts.map((district, index) => {
     return <Card 
     location={district.location}
@@ -42,14 +41,6 @@ const CardContainer = ({ filteredDistricts, selectedCards, displaySelected, disp
     removeSelected={removeSelected}
     />)
   
-
-  // if(displayFilter.length > 0) {
-  //   return(
-  //     <div className="cardList">
-  //       {displayFilter}
-  //     </div>
-  //   )
-  // }  else {
     return(
       <div className="cardList">
         <div className="selectedCardDiv">
@@ -64,7 +55,6 @@ const CardContainer = ({ filteredDistricts, selectedCards, displaySelected, disp
 // }
 
 CardContainer.propTypes = {
-  // districts: PropTypes.object,
   filteredDistricts: PropTypes.array,
   selectedCards: PropTypes.array,
   displaySelected: PropTypes.func,

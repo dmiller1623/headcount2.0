@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow, mount } from 'enzyme';
-import kinderData from './data/kindergartners_in_full_day_program.js';
-import DistrictRepository from "./helper.js"
-
 
 describe('App', () => {
   it('should match the snapshot', () => {
@@ -57,6 +54,9 @@ describe('App', () => {
     wrapper.instance().displayCompared()
     expect(wrapper.state('comparedCard')).toEqual(expected)
   })
-  
+  it('add districts should udate state with 181 cards on load', () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.state('filteredDistricts')).toHaveLength(181)
+  })
 
 })
