@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Search from './Search';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
-describe('Search',() => {
+describe('Search', () => {
   
   it('should match the snapshot', () => {
-    const wrapper = shallow(<Search />)
-    expect(wrapper).toMatchSnapshot()
-  })
+    const wrapper = shallow(<Search />);
+    expect(wrapper).toMatchSnapshot();
+  });
   it('should call filterDistricts on a change event', () => {
-    let filterDistrictsMock = jest.fn()
-    let eventObject = { target: { value: "A" } }
-    const wrapper = shallow(<Search filterDistricts={filterDistrictsMock}/>)
-    wrapper.find('input').simulate('change', eventObject)
-    expect(filterDistrictsMock).toHaveBeenCalled()
-  })
-})
+    let filterDistrictsMock = jest.fn();
+    let eventObject = { target: { value: "A" } };
+    const wrapper = shallow(<Search filterDistricts={filterDistrictsMock}/>);
+    wrapper.find('input').simulate('change', eventObject);
+    expect(filterDistrictsMock).toHaveBeenCalled();
+  });
+});

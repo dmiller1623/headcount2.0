@@ -1,62 +1,62 @@
 export default class DistrictRepository {
   constructor(data) {
-    this.stats = this.filterDuplicates(data) || []
+    this.stats = this.filterDuplicates(data) || [];
   }
   filterDuplicates(data) {
     const cleaner = data.reduce((cleaner, school) => {
-      if(!cleaner[school.Location.toUpperCase()]) {
+      if (!cleaner[school.Location.toUpperCase()]) {
         cleaner[school.Location.toUpperCase()] = {
           location: school.Location.toUpperCase(),
           stats: {}
-        } 
+        }; 
       } 
-      cleaner[school.Location.toUpperCase()].stats[school.TimeFrame] = Math.round(school.Data*1000)/1000 || 0
-     return cleaner
-   }, {})
-   return cleaner
+      cleaner[school.Location.toUpperCase()].stats[school.TimeFrame] =
+       Math.round(school.Data*1000)/1000 || 0;
+      return cleaner;
+    }, {});
+    return cleaner;
   }
 
   findByName(name = '') { 
-    name = name.toUpperCase()
-    return this.stats[name]
+    name = name.toUpperCase();
+    return this.stats[name];
   }
   findAllMatches(name) {
-    const schoolKeys = Object.keys(this.stats)
-    if(!name) {
+    const schoolKeys = Object.keys(this.stats);
+    if (!name) {
       return schoolKeys.map(key => {
-        return this.stats[key]
-      })
+        return this.stats[key];
+      });
     }
-    name = name.toUpperCase()
+    name = name.toUpperCase();
     const matches = schoolKeys.filter(key => {
-      return key.includes(name)
-    })
+      return key.includes(name);
+    });
     let matchObject = matches.map(match => {
-      return this.stats[match]
-    })
-    // console.log(matchObject)
-    return matchObject
+      return this.stats[match];
+    });
+    return matchObject;
   }
 
   findAverage(match) {
-    let averageKeys = Object.values(this.stats[match].stats)
+    let averageKeys = Object.values(this.stats[match].stats);
     let average = averageKeys.reduce((average, value) => {
-      average += value / averageKeys.length
-      return average
-    }, 0)
-    return Math.round(average*1000)/1000
+      average += value / averageKeys.length;
+      return average;
+    }, 0);
+    return Math.round(average*1000)/1000;
   }
 
   compareDistrictAverages(matchOne, matchTwo) {
-    matchOne = matchOne.toUpperCase()
-    matchTwo = matchTwo.toUpperCase()
-    const avgOne = this.findAverage(matchOne)
-    const avgTwo = this.findAverage(matchTwo)
+    matchOne = matchOne.toUpperCase();
+    matchTwo = matchTwo.toUpperCase();
+    const avgOne = this.findAverage(matchOne);
+    const avgTwo = this.findAverage(matchTwo);
     let comparedDistrict = {
       [matchOne]: avgOne,
       [matchTwo]: avgTwo,
       'compared': Math.round(avgOne / avgTwo*1000)/1000
-    }
-    return comparedDistrict
+    };
+    return comparedDistrict;
   }
 }

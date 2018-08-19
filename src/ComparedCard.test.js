@@ -1,12 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ComparedCard from './ComparedCard';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
-describe('ComparedCard',() => {
+describe('ComparedCard', () => {
   it('should match the snapshot', () => {
-    const wrapper = shallow(<ComparedCard />)
-    expect(wrapper).toMatchSnapshot()
-  })
+    const wrapper = shallow(<ComparedCard />);
+    expect(wrapper).toMatchSnapshot();
+  });
 
-})
+});

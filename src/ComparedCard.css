@@ -8,14 +8,16 @@
   border-radius: 15px;
   margin: .2rem;
   width: 15.5%;
+  height: 23rem;
 }
 
 .comparedName {
+  font-size: 1.5rem;
   color: black;
 }
 
 .averages {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 0rem;
   color: white}
 
@@ -23,3 +25,7 @@
   font-size: 2rem;
   color: #694460
 }
+ p {
+   margin: 0;
+   padding: 0;
+ }
