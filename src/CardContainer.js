@@ -6,6 +6,12 @@ import PropTypes from 'prop-types'
 
 const CardContainer = ({ filteredDistricts, selectedCards, displaySelected, displayCompared, comparedCard, removeSelected }) => {
   const displayFilter = filteredDistricts.map((district, index) => {
+    // console.log(district.location)
+    // console.log(district.stats)
+    // console.log(district.location)
+    // console.log(district.location)
+    // console.log(district.location)
+    // console.log(district.location)
     return <Card 
     location={district.location}
     stats={district.stats}
@@ -52,7 +58,6 @@ const CardContainer = ({ filteredDistricts, selectedCards, displaySelected, disp
       </div>
     )
   }
-// }
 
 CardContainer.propTypes = {
   filteredDistricts: PropTypes.array,

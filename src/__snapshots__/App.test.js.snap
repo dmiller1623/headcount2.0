@@ -17,6 +17,16 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="search-form"
+>
+          <h1>
+                    HeadCount 2.0
+          </h1>
+          <Search
+                    filterDistricts={[Function]}
+          />
+</div>,
         <CardContainer
           comparedCard={Object {}}
           displayCompared={[Function]}
@@ -2924,14 +2934,53 @@ ShallowWrapper {
           removeSelected={[Function]}
           selectedCards={Array []}
 />,
-        <Search
-          filterDistricts={[Function]}
-/>,
       ],
       "className": "App",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              HeadCount 2.0
+</h1>,
+            <Search
+              filterDistricts={[Function]}
+/>,
+          ],
+          "className": "search-form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "HeadCount 2.0",
+            },
+            "ref": null,
+            "rendered": "HeadCount 2.0",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "filterDistricts": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -5845,17 +5894,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "filterDistricts": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
     ],
     "type": "div",
   },
@@ -5866,6 +5904,16 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="search-form"
+>
+            <h1>
+                        HeadCount 2.0
+            </h1>
+            <Search
+                        filterDistricts={[Function]}
+            />
+</div>,
           <CardContainer
             comparedCard={Object {}}
             displayCompared={[Function]}
@@ -8773,14 +8821,53 @@ ShallowWrapper {
             removeSelected={[Function]}
             selectedCards={Array []}
 />,
-          <Search
-            filterDistricts={[Function]}
-/>,
         ],
         "className": "App",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                HeadCount 2.0
+</h1>,
+              <Search
+                filterDistricts={[Function]}
+/>,
+            ],
+            "className": "search-form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "HeadCount 2.0",
+              },
+              "ref": null,
+              "rendered": "HeadCount 2.0",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "filterDistricts": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -11689,17 +11776,6 @@ ShallowWrapper {
             ],
             "removeSelected": [Function],
             "selectedCards": Array [],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "filterDistricts": [Function],
           },
           "ref": null,
           "rendered": null,

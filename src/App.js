@@ -32,11 +32,15 @@ class App extends Component {
   }
   
   displaySelected = (card) => {
-    if(this.state.selectedCards.length > 1) {
+    if(this.state.selectedCards.length === 1 && this.state.selectedCards[0].location === card.location) {
       return 
     }
+    else if(this.state.selectedCards.length > 1) {
+      return 
+    } else {
     let selectedCards = [...this.state.selectedCards, card]
     this.setState({ selectedCards })
+    } 
   }
 
   displayCompared = () => {
@@ -68,6 +72,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <div className="search-form">
+          <h1>HeadCount 2.0</h1>
+          <Search filterDistricts={this.filterDistricts} />
+        </div>
         <CardContainer 
           filteredDistricts={this.state.filteredDistricts}
           selectedCards={this.state.selectedCards}
@@ -76,7 +84,6 @@ class App extends Component {
           comparedCard={this.state.comparedCard}
           removeSelected={this.removeSelected}
         />
-        <Search filterDistricts={this.filterDistricts} />
       </div>
     );
   }

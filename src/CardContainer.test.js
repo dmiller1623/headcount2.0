@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CardContainer from './CardContainer';
+import Card from './Card.js'
 import { shallow, mount } from 'enzyme';
-import Card from './Card';
+
 
 describe('CardContainer', () => {
   let wrapper
@@ -28,4 +29,16 @@ describe('CardContainer', () => {
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+  it('should pass down the right props to the Card component', () => {
+    wrapper = shallow(<CardContainer 
+      removeSelected={removeSelectedMock}
+      displaySelected={displaySelectedMock}
+      displayCompared={displayComparedMock}
+      selectedCards={selectedCards}
+      comparedCard={comparedCard}
+      filteredDistricts={filteredDistricts}
+    />)
+   console.log(wrapper.find('Card').props.location)
+  })
+
 })

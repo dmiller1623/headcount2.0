@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 const ComparedCard = ( { firstDistrict, compared, secondDistrict, firstDistrictName, secondDistrictName } ) => {
   return (
     <div className="comparedCard">
-      <h2>{firstDistrictName}</h2>
-      <h5>{firstDistrict}</h5>
-      <h2>{compared}</h2>
-      <h2>{secondDistrict}</h2>
-      <h2>{secondDistrictName}</h2>
+      <h2 className="comparedName">{firstDistrictName}</h2>
+      <h5 className="averages">&lt;-----{firstDistrict}</h5>
+      <h2 className="compared">&lt;--{compared}--&gt;</h2>
+      <h5 className="averages">{secondDistrict}----&gt;</h5>
+      <h2 className="comparedName">{secondDistrictName}</h2>
     </div>
   )
 }
