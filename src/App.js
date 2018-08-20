@@ -38,7 +38,7 @@ class App extends Component {
     } else if (this.state.selectedCards.length > 1) {
       return; 
     } else {
-      let newCard = {...card, selected: true }
+      let newCard = {...card, selected: true };
       let selectedCards = [...this.state.selectedCards, newCard];
       this.setState({ selectedCards });
     } 

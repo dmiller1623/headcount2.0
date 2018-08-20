@@ -15,7 +15,6 @@ class Card extends Component {
     this.setState({ clicked: !currentState });
     this.props.removeSelected(this.props.location);
     if (this.props.selected) {
-      // this.setState({ clicked: !currentState });
       return; 
     } else {
       this.props.displaySelected(this.props);
@@ -31,9 +30,9 @@ class Card extends Component {
       >
         <h2>{this.props.location}</h2>
         {
-          Object.keys(this.props.stats).map((stat) => {
+          Object.keys(this.props.stats).map((stat, index) => {
             return (
-              <article>
+              <article key={index}>
                 <ul className={this.props.stats[stat] < 0.5 ?
                   'highNum' : 'lowNum'}>
                   {stat}: {this.props.stats[stat]}
