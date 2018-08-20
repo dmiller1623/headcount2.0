@@ -20,15 +20,28 @@ ShallowWrapper {
         <h2
           className="comparedName"
 />,
+        <p>
+          ↓
+</p>,
         <h5
           className="averages"
-/>,
+>
+          &lt;-----
+</h5>,
         <h2
           className="compared"
-/>,
+>
+          &lt;--
+          --&gt;
+</h2>,
         <h5
           className="averages"
-/>,
+>
+          ------&gt;
+</h5>,
+        <p>
+          ↑
+</p>,
         <h2
           className="comparedName"
 />,
@@ -54,11 +67,28 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "↓",
+        },
+        "ref": null,
+        "rendered": "↓",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "<-----",
+            undefined,
+          ],
           "className": "averages",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "<-----",
+          undefined,
+        ],
         "type": "h5",
       },
       Object {
@@ -66,11 +96,19 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            "<--",
+            undefined,
+            "-->",
+          ],
           "className": "compared",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          "<--",
+          undefined,
+          "-->",
+        ],
         "type": "h2",
       },
       Object {
@@ -78,12 +116,29 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": Array [
+            undefined,
+            "------>",
+          ],
           "className": "averages",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          undefined,
+          "------>",
+        ],
         "type": "h5",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "↑",
+        },
+        "ref": null,
+        "rendered": "↑",
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -110,15 +165,28 @@ ShallowWrapper {
           <h2
             className="comparedName"
 />,
+          <p>
+            ↓
+</p>,
           <h5
             className="averages"
-/>,
+>
+            &lt;-----
+</h5>,
           <h2
             className="compared"
-/>,
+>
+            &lt;--
+            --&gt;
+</h2>,
           <h5
             className="averages"
-/>,
+>
+            ------&gt;
+</h5>,
+          <p>
+            ↑
+</p>,
           <h2
             className="comparedName"
 />,
@@ -144,11 +212,28 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "↓",
+          },
+          "ref": null,
+          "rendered": "↓",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "<-----",
+              undefined,
+            ],
             "className": "averages",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "<-----",
+            undefined,
+          ],
           "type": "h5",
         },
         Object {
@@ -156,11 +241,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              "<--",
+              undefined,
+              "-->",
+            ],
             "className": "compared",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            "<--",
+            undefined,
+            "-->",
+          ],
           "type": "h2",
         },
         Object {
@@ -168,12 +261,29 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": Array [
+              undefined,
+              "------>",
+            ],
             "className": "averages",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            undefined,
+            "------>",
+          ],
           "type": "h5",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "↑",
+          },
+          "ref": null,
+          "rendered": "↑",
+          "type": "p",
         },
         Object {
           "instance": null,

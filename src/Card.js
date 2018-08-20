@@ -15,8 +15,7 @@ class Card extends Component {
     this.setState({ clicked: !currentState });
     this.props.removeSelected(this.props.location);
     if (this.props.selected) {
-      console.log('hey')
-      this.setState({ clicked: !currentState });
+      // this.setState({ clicked: !currentState });
       return; 
     } else {
       this.props.displaySelected(this.props);

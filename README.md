@@ -16,4 +16,7 @@ When you find your distrcits click on the card and they will be moved to the top
 Click the selected card again to remove it from the top.
 A compared averages card will appear when two districts are selected.
 
+## Screenshot
+
+![headcount](./screenShots/myscreenshot.png)
 
