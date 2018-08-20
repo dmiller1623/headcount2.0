@@ -5,7 +5,6 @@ HeadCount 2.0 is a project designed to see various educational stats based on di
  
 ## Set Up
 
-
 Run `npm install` from the root directory
 
 Run `npm start` and visit localhost:3000 in your browser

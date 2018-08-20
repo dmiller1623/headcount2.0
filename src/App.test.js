@@ -63,6 +63,20 @@ describe('App', () => {
     wrapper.instance().removeSelected(location);
     expect(wrapper.state('selectedCards')).toHaveLength(1);
   });
+  it('sets state back to false after compared card is removed', () => {
+    const wrapper = shallow(<App />);
+    const location = 'COLORADO SPRINGS 11';
+    const initialState =  [ 
+      { location: 'COLORADO',
+        stats: { '2004': 0.24 } },
+      { location: 'COLORADO SPRINGS 11',
+        stats:{ '2004': 0.069  } }];
+    wrapper.setState({ selectedCards: initialState });
+    expect(wrapper.state('matchedCards')).toBe(true);
+    wrapper.instance().removeSelected(location);
+    expect(wrapper.state('matchedCards')).toBe(false);
+    
+  });
   it('displayCompared updates state with the compared object', () => {
     const wrapper = shallow(<App />);
     const initialState =  [ 

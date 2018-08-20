@@ -26,6 +26,11 @@ ShallowWrapper {
           <Search
                     filterDistricts={[Function]}
           />
+          <h4
+                    className="greeting"
+          >
+                    Select Two Cards To Compare
+          </h4>
 </div>,
         <CardContainer
           comparedCard={Object {}}
@@ -2951,6 +2956,11 @@ ShallowWrapper {
             <Search
               filterDistricts={[Function]}
 />,
+            <h4
+              className="greeting"
+>
+              Select Two Cards To Compare
+</h4>,
           ],
           "className": "search-form",
         },
@@ -2977,6 +2987,18 @@ ShallowWrapper {
             "ref": null,
             "rendered": null,
             "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Select Two Cards To Compare",
+              "className": "greeting",
+            },
+            "ref": null,
+            "rendered": "Select Two Cards To Compare",
+            "type": "h4",
           },
         ],
         "type": "div",
@@ -5913,6 +5935,11 @@ ShallowWrapper {
             <Search
                         filterDistricts={[Function]}
             />
+            <h4
+                        className="greeting"
+            >
+                        Select Two Cards To Compare
+            </h4>
 </div>,
           <CardContainer
             comparedCard={Object {}}
@@ -8838,6 +8865,11 @@ ShallowWrapper {
               <Search
                 filterDistricts={[Function]}
 />,
+              <h4
+                className="greeting"
+>
+                Select Two Cards To Compare
+</h4>,
             ],
             "className": "search-form",
           },
@@ -8864,6 +8896,18 @@ ShallowWrapper {
               "ref": null,
               "rendered": null,
               "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Select Two Cards To Compare",
+                "className": "greeting",
+              },
+              "ref": null,
+              "rendered": "Select Two Cards To Compare",
+              "type": "h4",
             },
           ],
           "type": "div",

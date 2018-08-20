@@ -15,6 +15,8 @@ class Card extends Component {
     this.setState({ clicked: !currentState });
     this.props.removeSelected(this.props.location);
     if (this.props.selected) {
+      console.log('hey')
+      this.setState({ clicked: !currentState });
       return; 
     } else {
       this.props.displaySelected(this.props);
@@ -24,7 +26,7 @@ class Card extends Component {
 
   render() {
     return (
-      <div className={this.state.clicked || 
+      <div className={this.state.clicked ||
       this.props.selected ? 'selectedCard': 'cards'} 
       onClick={this.handleClick}
       >

@@ -2,7 +2,7 @@ import React from 'react';
 import CardContainer from './CardContainer';
 import Card from './Card.js';
 import { shallow, mount } from 'enzyme';
-import ComparedCard from './ComparedCard'
+import ComparedCard from './ComparedCard';
 
 describe('CardContainer', () => {
   let wrapper;
@@ -65,14 +65,14 @@ describe('CardContainer', () => {
     let comparedCardMock = { "COLORADO": 0.53,
       "COLORADO SPRINGS 11": 0.833,
       "compared": 0.636 };
-      wrapper = mount(<CardContainer 
-        removeSelected={removeSelectedMock}
-        displaySelected={displaySelectedMock}
-        displayCompared={displayComparedMock}
-        selectedCards={selectedCardsMock}
-        comparedCard={comparedCardMock}
-        filteredDistricts={filteredDistrictsMock}
-      />);
-      expect(wrapper.find(ComparedCard).length).toEqual(1)
-    })
+    wrapper = mount(<CardContainer 
+      removeSelected={removeSelectedMock}
+      displaySelected={displaySelectedMock}
+      displayCompared={displayComparedMock}
+      selectedCards={selectedCardsMock}
+      comparedCard={comparedCardMock}
+      filteredDistricts={filteredDistrictsMock}
+    />);
+    expect(wrapper.find(ComparedCard).length).toEqual(1);
+  });
 });

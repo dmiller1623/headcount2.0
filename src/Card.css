@@ -5,7 +5,7 @@
   height: 23rem;
   margin: .2rem;
   opacity: .85;
-  width: 15.5%;
+  width: 14rem;
 }
 
 .cards:hover {
@@ -44,5 +44,5 @@ ul {
   flex-direction: column;
   height: 23rem;
   margin: .2rem;
-  width: 15.5%;
+  width: 14rem;
 }

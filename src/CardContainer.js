@@ -31,7 +31,7 @@ const CardContainer = ({
       displaySelected={displaySelected}
       selectedCards={selectedCards}
       displayCompared={displayCompared}
-      selected
+      selected={district.selected}
       removeSelected={removeSelected}
     />;
   });

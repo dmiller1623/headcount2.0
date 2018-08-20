@@ -8,7 +8,7 @@
   height: 23rem;
   justify-content: space-between;
   margin: .2rem;
-  width: 15.5%;
+  width: 14rem;
 }
 
 .comparedName {
@@ -17,12 +17,13 @@
 }
 
 .averages {
-  color: white}
+  color: white;
   font-size: 1.8rem;
   margin: 0rem;
+}
 
 .compared {
-  color: #694460
+  color: #694460;
   font-size: 2rem;
 }
  p {
